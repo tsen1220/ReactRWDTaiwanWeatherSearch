@@ -4,8 +4,6 @@
 
 [簡介](#簡介)
 
-[氣象資料](#氣象資料)
-
 # 啟動
 
 React 開發。
@@ -35,4 +33,16 @@ $ serve -s build
 
 這是可以查詢即時氣象資料的網頁，串接中央氣象局的 API，以求得到我們想要的資料，此外有製作 RWD，增加使用者的體驗。
 
-<img src='https://raw.githubusercontent.com/tsen1220/DjangoReact-Forum/master/intro/Home.jpg' alt=''>
+<img src='https://raw.githubusercontent.com/tsen1220/ReactRWDTaiwanWeatherSearch/master/introimage/Home.jpg' alt=''>
+
+RWD 頁面:
+
+<img src='https://raw.githubusercontent.com/tsen1220/ReactRWDTaiwanWeatherSearch/master/introimage/RWDHome.jpg' alt=''>
+
+可以藉由上方的選項選擇想看的城市資料。
+
+<img src='https://raw.githubusercontent.com/tsen1220/ReactRWDTaiwanWeatherSearch/master/introimage/Detail.jpg' alt=''>
+
+RWD 指定城市資料頁面:
+
+<img src='https://raw.githubusercontent.com/tsen1220/ReactRWDTaiwanWeatherSearch/master/introimage/RWDDetail.jpg' alt=''>
