@@ -1,10 +1,44 @@
 .search {
   font-size: 20px;
   text-align: center;
+  position: absolute;
+  left: 43%;
 }
 
 select {
   width: 150px;
   height: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .search {
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    left: 450px;
+  }
+  .detail1 {
+    position: absolute;
+    left: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .position {
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    left: 2%;
+  }
+  .detail1 {
+    position: absolute;
+    left: 2%;
+    top: 100px;
+  }
+  .adjustposition {
+    position: absolute;
+    top: 14%;
+    left: 0%;
+  }
 }
 /*# sourceMappingURL=search.css.map */

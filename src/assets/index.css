@@ -1,0 +1,27 @@
+body {
+  width: 100%;
+  background: url("./cloud.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    height: 1800px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    height: 1400px;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-repeat: repeat-y;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Box from "../component/box";
+import "../assets/search.css";
 import axios from "axios";
 
 class Data extends Component {
@@ -135,7 +136,7 @@ class Data extends Component {
       );
     });
 
-    return <div> {location}</div>;
+    return <div className="adjustposition"> {location}</div>;
   }
 }
 

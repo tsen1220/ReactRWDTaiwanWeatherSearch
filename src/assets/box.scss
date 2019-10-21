@@ -7,7 +7,7 @@
   border: 1px solid black;
   margin: 20px;
   left: 70px;
-  top: 70px;
+  top: 150px;
 
   & .title {
     width: 100%;
@@ -69,8 +69,8 @@
     position: relative;
     font-family: DFKai-SB;
     border: 1px solid black;
-    margin: 20px;
-    left: 0px;
+    margin: 0px;
+    left: 7px;
     top: 70px;
 
     & .title {
@@ -93,6 +93,145 @@
         position: relative;
         left: 40px;
         opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "769px") {
+  .box {
+    display: inline-block;
+    width: 350px;
+    position: relative;
+    font-family: DFKai-SB;
+    border: 1px solid black;
+    margin: 0px;
+    left: 20px;
+    top: 70px;
+
+    & .title {
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 40px;
+      margin: 0px;
+      position: relative;
+      display: block;
+      background: gray;
+      & .locat {
+        position: relative;
+        font-size: 30px;
+        left: 20px;
+      }
+
+      & .time {
+        font-size: 20px;
+        position: relative;
+        left: 40px;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "400px") {
+  .box {
+    display: inline-block;
+    width: 310px;
+    position: relative;
+    font-family: DFKai-SB;
+    border: 1px solid black;
+    margin: 0px;
+    left: 23px;
+    top: 70px;
+
+    & .title {
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 40px;
+      margin: 0px;
+      position: relative;
+      display: block;
+      background: gray;
+      & .locat {
+        position: relative;
+        font-size: 30px;
+        left: 20px;
+      }
+
+      & .time {
+        font-size: 20px;
+        position: relative;
+        left: 40px;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "330px") {
+  .box {
+    display: inline-block;
+    width: 270px;
+    position: relative;
+    font-family: DFKai-SB;
+    border: 1px solid black;
+    margin: 0px;
+    left: 23px;
+    top: 70px;
+
+    & .title {
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 40px;
+      margin: 0px;
+      position: relative;
+      display: block;
+      background: gray;
+      & .locat {
+        position: relative;
+        font-size: 20px;
+        left: 20px;
+        top: 10px;
+      }
+
+      & .time {
+        font-size: 17px;
+        position: relative;
+        left: 40px;
+        opacity: 0.7;
+        top: 10px;
+      }
+    }
+
+    & .content {
+      color: white;
+      width: 100%;
+      top: 40px;
+      left: 0;
+      background: rgb(58, 44, 44);
+      position: absolute;
+      height: 100px;
+      display: block;
+      & .cond {
+        font-size: 20px;
+        position: relative;
+        top: 20px;
+        left: 30px;
+      }
+      & .temp {
+        font-size: 18px;
+        position: relative;
+        left: 30px;
+        top: 38px;
+      }
+      & .rain {
+        font-size: 18px;
+        position: relative;
+        left: 160px;
+        top: 18px;
       }
     }
   }

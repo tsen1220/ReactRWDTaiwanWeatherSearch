@@ -41,7 +41,7 @@ class Search extends Component {
     });
 
     return (
-      <div className="search">
+      <div className="search position ">
         <h1 className="ti">天氣查詢</h1>
         <select id="taiwan" onChange={this.props.evt}>
           <option></option>

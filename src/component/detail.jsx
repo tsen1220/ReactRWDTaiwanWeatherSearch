@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import "../assets/search.css";
 import Box from "./box";
 
 class Detail extends Component {
@@ -136,7 +136,7 @@ class Detail extends Component {
       );
     });
 
-    return <div>{location}</div>;
+    return <div className="detail1">{location}</div>;
   }
 }
 
