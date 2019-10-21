@@ -1,13 +1,16 @@
 import React from "react";
-// import Box from "./component/box";
-import Data from "./component/index";
-import Search from "./component/search";
+
+import { BrowserRouter as Router } from "react-router-dom";
+import BaseRouter from "./routes";
+import Finddata from "./component/finddata";
 
 function App() {
   return (
     <div>
-      <Search />
-      <Data />
+      <Router>
+        <Finddata />
+        <BaseRouter />
+      </Router>
     </div>
   );
 }

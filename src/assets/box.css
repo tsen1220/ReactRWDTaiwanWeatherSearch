@@ -65,4 +65,38 @@
   left: 200px;
   top: 18px;
 }
+
+@media screen and (max-width: 450px) {
+  .box {
+    display: inline-block;
+    width: 350px;
+    position: relative;
+    font-family: DFKai-SB;
+    border: 1px solid black;
+    margin: 20px;
+    left: 0px;
+    top: 70px;
+  }
+  .box .title {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 40px;
+    margin: 0px;
+    position: relative;
+    display: block;
+    background: gray;
+  }
+  .box .title .locat {
+    position: relative;
+    font-size: 30px;
+    left: 20px;
+  }
+  .box .title .time {
+    font-size: 20px;
+    position: relative;
+    left: 40px;
+    opacity: 0.7;
+  }
+}
 /*# sourceMappingURL=box.css.map */

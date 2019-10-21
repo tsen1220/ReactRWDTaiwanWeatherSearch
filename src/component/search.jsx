@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import "../assets/search.css";
+
 import axios from "axios";
 
 class Search extends Component {
   state = {
     location: []
   };
-
-  change() {
-    var taiwan = document.getElementById("taiwan");
-    console.log(taiwan.value);
-  }
 
   getLocation() {
     axios
@@ -36,8 +32,9 @@ class Search extends Component {
 
   render() {
     const option = this.state.location.map((locate, index) => {
+      var link = "/" + locate;
       return (
-        <option key={index} value={locate}>
+        <option key={index} value={link}>
           {locate}
         </option>
       );
@@ -46,7 +43,9 @@ class Search extends Component {
     return (
       <div className="search">
         <h1 className="ti">天氣查詢</h1>
-        <select id="taiwan" onChange={this.change}>
+        <select id="taiwan" onChange={this.props.evt}>
+          <option></option>
+          <option value="/">全部縣市</option>
           {option}
         </select>
       </div>

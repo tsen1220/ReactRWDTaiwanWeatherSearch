@@ -18,24 +18,23 @@ class Data extends Component {
         "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-9BB00642-BB6E-4B27-BD5F-58DAD19EA057&format=JSON"
       )
       .then(res => {
-        // //2為溫度 0為氣象狀況 1為降雨
-        // console.log(res.data.records.location[i].weatherElement[2].time);
-        // console.log(res.data.records.location[i].weatherElement[1].time);
-        // console.log(res.data.records.location[i].weatherElement[0].time);
-        // console.log(res.data.records.location[i].locationName);
         var date = new Date();
         var today = date.getDate();
-        var time = date.getHours();
-
+        var weatherDateStart = parseInt(
+          res.data.records.location[0].weatherElement[2].time[0].startTime.slice(
+            8,
+            10
+          )
+        );
+        var weatherDateEnd = parseInt(
+          res.data.records.location[0].weatherElement[2].time[0].endTime.slice(
+            8,
+            10
+          )
+        );
         for (let i = 0; i < res.data.records.location.length; i++) {
-          var weatherDate = parseInt(
-            res.data.records.location[
-              i
-            ].weatherElement[2].time[0].startTime.slice(8, 10)
-          );
-
           //1
-          if (12 < time && time < 18 && today === weatherDate) {
+          if (today === weatherDateEnd) {
             var location = res.data.records.location[i].locationName;
 
             var weatherTimeStart =
@@ -68,17 +67,15 @@ class Data extends Component {
             var weatherCondition =
               res.data.records.location[i].weatherElement[0].time[0].parameter
                 .parameterName;
-          }
-
-          //2
-          if ((18 < time || time < 6) && today === weatherDate) {
+          } else if (today !== weatherDateEnd) {
             var location = res.data.records.location[i].locationName;
+
             var weatherTimeStart =
               "今日" +
               parseInt(
                 res.data.records.location[
                   i
-                ].weatherElement[2].time[1].startTime.slice(11, 13)
+                ].weatherElement[2].time[0].startTime.slice(11, 13)
               ) +
               ":00";
             var weatherTimeEnd =
@@ -86,22 +83,22 @@ class Data extends Component {
               parseInt(
                 res.data.records.location[
                   i
-                ].weatherElement[2].time[1].endTime.slice(11, 13)
+                ].weatherElement[2].time[0].endTime.slice(11, 13)
               ) +
               ":00";
+
             var temperature =
-              res.data.records.location[i].weatherElement[2].time[1].parameter
+              res.data.records.location[i].weatherElement[2].time[0].parameter
                 .parameterName +
               " " +
-              res.data.records.location[i].weatherElement[2].time[1].parameter
+              res.data.records.location[i].weatherElement[2].time[0].parameter
                 .parameterUnit;
-
             var rain =
-              res.data.records.location[i].weatherElement[1].time[1].parameter
+              res.data.records.location[i].weatherElement[1].time[0].parameter
                 .parameterName + " %";
 
             var weatherCondition =
-              res.data.records.location[i].weatherElement[0].time[1].parameter
+              res.data.records.location[i].weatherElement[0].time[0].parameter
                 .parameterName;
           }
 
@@ -138,7 +135,7 @@ class Data extends Component {
       );
     });
 
-    return <div>{location}</div>;
+    return <div> {location}</div>;
   }
 }
 
