@@ -168,7 +168,7 @@
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 380px) {
   .box {
     display: inline-block;
     width: 270px;
