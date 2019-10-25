@@ -119,6 +119,9 @@ class Detail extends Component {
   }
   componentDidMount() {
     this.getWeatherData();
+    setInterval(() => {
+      this.getWeatherData();
+    }, 21600000);
   }
 
   render() {
