@@ -1,6 +1,6 @@
 # Catalog/目錄
 
-## 英文
+## English
 
 [GettingStarted](#GettingStarted)
 
